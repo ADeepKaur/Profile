@@ -37,10 +37,9 @@
  const openMenu = document.querySelector('.openMenu');
 
 
-
-
  openMenu.addEventListener('click',show);
  closeMenu.addEventListener('click',close);
+ mainMenu.addEventListener('click',close);
 
  function show(){
      mainMenu.style.display = 'flex';
@@ -51,4 +50,3 @@
  }
 
 
- 
