@@ -1,4 +1,4 @@
-anime.timeline({loop: true})
+anime.timeline({loop: false})
   .add({
     targets: '.ml15 .word',
     scale: [14,1],
@@ -12,7 +12,7 @@ anime.timeline({loop: true})
     duration: 1000,
     easing: "easeOutExpo",
     delay: 1000,
-    endDelay: 1000,
+    end
   });
 
   

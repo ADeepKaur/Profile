@@ -224,7 +224,7 @@ nav .mainMenu {
 
 .btn {
   margin: 0 9px;
-  background: #026670;
+  background: #fef9c7;
   border-radius: 2rem;
   color: #303C6C;
   padding: 1rem 2.5rem;
@@ -307,6 +307,10 @@ nav .mainMenu {
   padding: 2.5rem;
   
 }
+.education .container{
+    width: 100%;
+    
+  }
 
 .title-heading {
   text-align: center;
@@ -328,6 +332,8 @@ nav .mainMenu {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1rem;
   min-height: 60vh;
+  padding-top: 2rem;
+
 }
 
 .tier-item {
@@ -383,6 +389,10 @@ nav .mainMenu {
   text-align: center;
   font-size: 2.5rem;
   
+
+}
+.contact i{
+  padding: 2rem;
 
 }
 
@@ -453,11 +463,6 @@ footer a {
   }
 .title-heading {
     margin: 0;
-  }
-
-.education .container{
-    width: 100%;
-    
   }
 
 .main-message h2 {
