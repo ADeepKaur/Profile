@@ -431,15 +431,13 @@ footer a {
 
 /* Responsive Design */
 
-@media (max-width: 700px) {
+@media (max-width: 375px) {
 
 
 .container {
-  width: 100%;
   max-height: 40%;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1.25rem;
 }
 
 
@@ -458,7 +456,6 @@ footer a {
 .main-message h2 {
     letter-spacing: 1rem;
     font-size: 1.5rem;
-    width: 29ch;
   }
 
 .main-message h3 {
@@ -475,10 +472,8 @@ footer a {
 
 .about-text-box{
     flex-direction: column;
-    padding: 0 1.25rem;
-    
-
-}
+    margin-bottom: 15rem; 
+  }
 .about-text-box h2 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -495,16 +490,14 @@ footer a {
   }
 
 .education {
-  width: 70%;
-  padding: 8rem;
+  margin: auto;
+  align-content: center;
  
 }
 
 .contact {
-  width: 50%;
   margin: auto;
   align-content: center;
-  padding: 10rem;
 }
 
   .row:after {
