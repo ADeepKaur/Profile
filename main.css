@@ -1,4 +1,4 @@
- @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
 
 /* Global styles */
 
@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
   color: #080D14;
   background: #FEF9c7;
+  overflow-x: hidden;
 }
 
 a {
@@ -166,7 +167,7 @@ nav .mainMenu {
   height: 80vh;
   width: 100%;
   max-height: 100rem;
-  padding: 2.5rem;
+  /*padding: 2.5rem;*/
   align-content: center;
   background-color:#9FEDD7;
 
@@ -256,32 +257,22 @@ nav .mainMenu {
 .about {
   width: 100%;
   max-height: 80vh;
-  margin: auto;
-  padding-top: 30vh;
+  margin: 2rem 0;
+  
 }
 
 .about .container {
   display: flex;
   text-align: center;
-  
-  
-
 }
 
-.about-img img {
-  height: 14rem;
-  width: 14em;
-  border-radius: 50%;
-  margin: 4rem;
-  box-shadow: 0 20px 30px 0 grey;
-}
 
 .about-text-box {
   
   height: 24rem;
   width: auto;
   margin: 2rem;
-  padding: 2rem;
+  
   
 }
 
@@ -293,7 +284,6 @@ nav .mainMenu {
 .about-text-box p {
   
   font-size: 1.4rem;
-  padding: 0;
   margin-bottom: 1.45rem;
 }
 
@@ -304,17 +294,18 @@ nav .mainMenu {
   background-color:#026670;
   width: 100%;
   max-height: 100rem;
-  padding: 2.5rem;
+
+  
   
 }
-.education .container{
+/*.education .container{
     width: 100%;
     
-  }
+  }*/
 
 .title-heading {
   text-align: center;
-  margin-bottom: 5rem;
+  padding: 3rem 0;
 }
 
 .title-heading h2 {
@@ -332,7 +323,7 @@ nav .mainMenu {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1rem;
   min-height: 60vh;
-  padding-top: 2rem;
+  /*padding-top: 2rem;*/
 
 }
 
@@ -382,12 +373,12 @@ nav .mainMenu {
   width: 100%;
   max-width: 120vh;
   margin: auto;
-  padding: 10rem;
 }
 
 .contact h2 {
   text-align: center;
   font-size: 2.5rem;
+  padding: 3rem 0;
   
 
 }
@@ -415,18 +406,18 @@ nav .mainMenu {
 footer {
   width: 100%;
   max-height: 100rem;
-  padding: 2.5rem;
   color: #080D14;
   background-color:#9FEDD7;
   text-align: center;
   font-size: 1.2rem;
   display: flex;
+  padding-top: 3rem;
   justify-content: center;
   flex-direction: column;
 }
 
 footer a {
-  margin: 0 0.2rem;
+  margin: 3rem 0.2rem;
 }
 
 .footer-coded-by {
@@ -440,7 +431,7 @@ footer a {
 
 /* Responsive Design */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
 
 .container {
@@ -448,16 +439,15 @@ footer a {
   max-height: 40%;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0;
+  padding: 1.25rem;
 }
 
 
 .main-message h3 {
     font-size: 3rem;
   }
-.about .container {
-    flex-direction: column;
-  }
+
+
   p {
     font-size: 1.3rem;
   }
@@ -482,12 +472,19 @@ footer a {
     border-radius: 0.9rem;
     padding: 0.9rem 0.9rem;
   }
+
+.about-text-box{
+    flex-direction: column;
+    padding: 0 1.25rem;
+    
+
+}
 .about-text-box h2 {
     font-size: 3rem;
     margin-bottom: 20px;
   }
 .about-text-box p {
-    margin: 0 0 2.45rem;
+    margin-bottom: 3rem;
   }
 
 .title-heading h2 {
@@ -497,11 +494,19 @@ footer a {
     font-size: 1.3rem;
   }
 
-.contact .container{
-    flex-direction: column;
-   
-     
+.education {
+  width: 70%;
+  padding: 8rem;
+ 
 }
+
+.contact {
+  width: 50%;
+  margin: auto;
+  align-content: center;
+  padding: 10rem;
+}
+
   .row:after {
   content: "";
   display: table;
@@ -511,4 +516,6 @@ footer a {
   footer,
   footer p {
     font-size: 1.2rem;
+  
   }
+
