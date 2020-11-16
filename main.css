@@ -19,6 +19,8 @@ html {
   overflow-x: hidden;
 }
 
+.mapouter{position:relative;text-align:right;height:403px;width:420px;}.gmap_canvas {overflow:hidden;background:none!important;height:403px;width:420px;}
+
 a {
   text-decoration: none;
   color: #303C6C;
