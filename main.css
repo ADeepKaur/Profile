@@ -1,25 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
 
-/* Global styles */
-
+/* Reset and Global */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: PredigeRoundedPanic,"Trebuchet MS","Helvetica Rounded",Arial,sans-serif;
-  font-size: 12px;
-  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   scroll-behavior: smooth;
   color: #080D14;
-  background: #FEF9c7;
+  background: #FEF9C7;
   overflow-x: hidden;
 }
 
-.mapouter{position:relative;text-align:right;height:403px;width:420px;}.gmap_canvas {overflow:hidden;background:none!important;height:403px;width:420px;}
+body {
+  line-height: 1.6;
+}
 
 a {
   text-decoration: none;
@@ -37,490 +38,280 @@ ul {
 p {
   font-size: 1.4rem;
 }
-/* Animated text*/
 
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Navigation */
+nav {
+  background: #9FEDD7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo img {
+  width: 120px;
+  height: auto;
+}
+
+nav .mainMenu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav .mainMenu li a {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+}
+
+nav .mainMenu li a:hover {
+  background: #F172A1;
+  color: #fff;
+  border-radius: 8px;
+}
+
+nav .openMenu,
+nav .closeMenu {
+  display: none;
+}
+
+/* Animated Heading */
 .ml15 {
   font-weight: 300;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-
+  font-size: 2rem;
+  letter-spacing: 0.4em;
+  text-align: center;
 }
 
 .ml15 .word {
   display: inline-block;
-  line-height: 1em;
-}
-
-
-/* header */
-
-header {
-  width: 100%;
-  height: 5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.container {
-  width: 100%;
-  max-width: 90rem;
-  max-height: 80vh;
-  margin: 0 auto;
-  padding: 0 ;
-}
-
-nav {
-    background: #9FEDD7;
-    color: #303C6C;
-    display: flex;
-    justify-content: space-between;
-}
-nav .mainMenu {
-    display: flex;
-    list-style: none;
-}
-nav .mainMenu li a {
-    display: inline-block;
-    padding: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #303C6C;
-    font-size: 1.5rem;
-}
-nav .mainMenu li a:hover {
-    background: #F172A1;
-    text-decoration: overline underline;
-}
-nav .openMenu {
-    font-size: 2rem;
-    margin: 20px;
-    display: none;
-    cursor: pointer;
-}
-nav .mainMenu .closeMenu , .icons i {
-    font-size: 2rem;
-    display: none;
-    cursor: pointer;
-}
-/*.fa-facebook:hover {color: rgb(0, 110, 255);}
-.fa-twitter:hover {color: rgb(86, 154, 243);}
-.fa-instagram:hover {color: rgb(255, 0, 191);}
-.fa-github:hover {color: rgb(255, 123, 0);}*/
-
-nav .logo img{
-    margin: 0;
-    width: 155px;
-    height: 155px;
-    cursor: pointer;
-}
-nav .mainMenu {
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 10;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #9FEDD7;
-        transition: top 1s ease;
-        display: none;
-    }
-    nav .mainMenu .closeMenu {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-
-    }
-    nav .openMenu {
-        display: block;
-    }
-    nav .mainMenu li a:hover {
-        background: none;
-        color: #F172A1;
-        font-size: 1.6rem;
-    }
-    .icons i {
-        display: inline-block;
-        padding: 12px;
-    }
-
-@keyframes navLinkAnimate {
-  from {
-    opacity: 0;
-    transform: translate(50px);
-
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px);
-
-  }
 }
 
 /* Landing Page */
 .landing-page {
-  
-  height: 80vh;
-  width: 100%;
-  max-height: 100rem;
-  /*padding: 2.5rem;*/
-  align-content: center;
-  background-color:#9FEDD7;
-
-    
+  min-height: 100vh;
+  background-color: #9FEDD7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-message {
-  width: 100%;
-  text-transform: uppercase;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.main-message h2 {
-  letter-spacing: 1rem;
-  font-size: 2rem;
-  white-space: nowrap;
-  /*animation: typing 4s steps(27) ;*/
-  width: 27ch;
-  margin: auto;
-  display: block;
-  
-}
-
-@keyframes typing {
-  from{
-    width: 0ch;
-  }
-  to {
-    width: 27ch;
-  }
-}
-
 .main-message h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 1rem 0;
- 
-  
 }
 
 .main-message p {
-  text-transform: none;
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .intro-btn {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .btn {
-  margin: 0 9px;
   background: #fef9c7;
-  border-radius: 2rem;
   color: #303C6C;
-  padding: 1rem 2.5rem;
-  display: inline-block;
-  margin-top: 2rem;
-  transition: background-color 650ms ;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  color: #fafafa;
-  background-color:#F172A1;
+  background: #F172A1;
+  color: white;
 }
 
 .scroll-down i {
-  color: #303C6C;
-  transition: color 650ms;
+  font-size: 2.5rem;
   margin-top: 2rem;
-  font-size: 3.5rem;
+  color: #303C6C;
+  transition: color 0.3s;
 }
 
 .scroll-down i:hover {
   color: #F172A1;
 }
 
-/* About */
-
+/* About Section */
 .about {
   width: 100%;
-  max-height: 80vh;
-  margin: 2rem 0;
-  
-}
-
-.about .container {
-  display: flex;
+  padding: 4rem 0;
   text-align: center;
 }
 
-
 .about-text-box {
-  
-  height: 24rem;
-  width: auto;
-  margin: 2rem;
-  
-  
+  max-width: 800px;
+  margin: auto;
 }
 
 .about-text-box h2 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .about-text-box p {
-  
   font-size: 1.4rem;
-  margin-bottom: 1.45rem;
 }
 
-/*Skills and education */
-
+/* Education & Skills */
 .education {
-  
-  background-color:#026670;
-  width: 100%;
-  max-height: 100rem;
-
-  
-  
+  background-color: #026670;
+  color: #fff;
+  padding: 4rem 2rem;
 }
-/*.education .container{
-    width: 100%;
-    
-  }*/
 
 .title-heading {
   text-align: center;
-  padding: 3rem 0;
+  margin-bottom: 3rem;
 }
 
 .title-heading h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.title-heading p {
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 5rem;
+  font-size: 2.5rem;
 }
 
 .education-tiers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1rem;
-  min-height: 60vh;
-  /*padding-top: 2rem;*/
-
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .tier-item {
-  padding: 3rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: default;
-  height: auto; /* Let it grow naturally */
+  background: rgba(255,255,255,0.9);
+  color: #080D14;
+  padding: 2rem;
+  border-radius: 10px;
+  height: auto;
+  overflow-y: auto;
 }
-
-
 
 .tier-item i {
-  font-size: 3.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-
 
 .tier-item h2 {
   font-size: 2rem;
-  margin: 2rem 0;
+  margin-bottom: 1rem;
+  color: #222;
   text-decoration: underline;
-  color:rgba(22,22,22, 1);
-  
 }
+
 .tier-item h3 {
-  font-size: 20px;
-  margin: 1rem 0;
-  color:rgba(22,22,22, 1);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #222;
 }
 
 .tier-item p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
+
 .tier-item ul {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
-  list-style-type: square;
   padding-left: 1.5rem;
-  margin-top: 1rem;
-  columns: 2; /* or 3 for more compact layout */
+  list-style-type: square;
+  font-size: 1.2rem;
+  columns: 2;
   column-gap: 2rem;
 }
 
-
-
-
 /* Contact */
-
 .contact {
-  width: 100%;
-  max-width: 120vh;
-  margin: auto;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .contact h2 {
-  text-align: center;
   font-size: 2.5rem;
-  padding: 3rem 0;
-  
-
-}
-.contact i{
-  padding: 2rem;
-
-}
-
-.contact p {
-  
-  font-size: 1.4rem;
-  padding: 3rem;
-  margin: 0.9rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .contact .container {
-  
   display: flex;
-  margin: auto;
+  flex-direction: column;
   align-items: center;
 }
 
-/* Footer */
-
-footer {
-  width: 100%;
-  max-height: 100rem;
-  color: #080D14;
-  background-color:#9FEDD7;
-  text-align: center;
-  font-size: 1.2rem;
-  display: flex;
-  padding-top: 3rem;
-  justify-content: center;
-  flex-direction: column;
+.contact a {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-footer a {
-  margin: 3rem 0.2rem;
+/* Footer */
+footer {
+  background-color: #9FEDD7;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-nav-link {
+  font-size: 1.2rem;
+  color: #303C6C;
 }
 
 .footer-coded-by {
-  margin: 2rem 0;
+  font-size: 1.1rem;
 }
 
-.footer-social a {
-  margin: 0 0.5rem;
-  font-size: 2rem;
-}
-
-/* Responsive Design */
-
-@media (max-width: 700px) {
-
-
-.container {
-  max-height: 60%;
-  max-width: 700px;
-  flex-direction: column;
-  margin: 0;
-}
-
-
-
-.main-message h3 {
-    font-size: 3rem;
-  }
-
-
-  p {
-    font-size: 1.3rem;
-  }
-  
-.title-heading {
-    margin: 0;
-  }
-
-.main-message h2 {
-    letter-spacing: 1rem;
-    font-size: 1.5rem;
-  }
-
-.main-message h3 {
-    font-size: 2rem;
-  }
-
-.main-message p {
-    font-size: 1.3rem;
-  }
-.btn {
-    border-radius: 0.9rem;
-    padding: 0.9rem 0.9rem;
-  }
-
-.about-text-box{
+/* Responsive Menu Toggle (optional JS required) */
+@media (max-width: 768px) {
+  nav .mainMenu {
     flex-direction: column;
-    margin-bottom: 15rem; 
-  }
-.about-text-box h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-.about-text-box p {
-    margin-bottom: 3rem;
+    background-color: #9FEDD7;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    display: none;
   }
 
-.title-heading h2 {
-    margin-bottom: 2rem;
-  }
-.title-heading p {
-    font-size: 1.3rem;
+  nav .openMenu,
+  nav .closeMenu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
-.education {
-  margin: auto;
-  align-content: center;
- 
+  .intro-btn {
+    flex-direction: column;
+  }
+
+  .tier-item ul {
+    columns: 1;
+  }
+
+  .main-message h3 {
+    font-size: 2.2rem;
+  }
 }
-
-.contact {
-  margin: auto;
-  align-content: center;
-}
-
-  .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-  footer,
-  footer p {
-    font-size: 1.2rem;
-  
-  }
-
