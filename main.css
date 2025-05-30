@@ -330,19 +330,21 @@ nav .mainMenu {
 }
 
 .tier-item {
-  max-height: 40vh;
   padding: 3rem;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: default;
+  height: auto; /* Let it grow naturally */
 }
+
 
 
 .tier-item i {
   font-size: 3.5rem;
 }
+
 
 .tier-item h2 {
   font-size: 2rem;
@@ -365,7 +367,12 @@ nav .mainMenu {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   list-style-type: square;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  columns: 2; /* or 3 for more compact layout */
+  column-gap: 2rem;
 }
+
 
 
 
