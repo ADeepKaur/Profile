@@ -1,3 +1,17 @@
+nav {
+  background: #9FEDD7;
+  color: #303C6C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 4rem;  /* Reduced height */
+}
+
+nav .logo img {
+  width: 80px;   /* Reduced logo size */
+  height: auto;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Share+Tech+Mono&display=swap");
 
 /* Reset and Global */
@@ -50,17 +64,16 @@ p {
 /* Navigation */
 nav {
   background: #9FEDD7;
+  color: #303C6C;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 0.5rem 1rem;
+  height: 4rem;  /* Reduced height */
 }
 
 nav .logo img {
-  width: 120px;
+  width: 80px;   /* Reduced logo size */
   height: auto;
 }
 
@@ -241,6 +254,20 @@ nav .closeMenu {
 .contact {
   padding: 4rem 2rem;
   text-align: center;
+}
+.contact i {
+  font-size: 1.5rem;  /* Smaller icons */
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
 }
 
 .contact h2 {
